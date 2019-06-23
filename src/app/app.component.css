@@ -1,0 +1,23 @@
+.col-md-4{
+  width: 50px;
+  padding-left: 25px;
+  display: flex;
+}
+
+.card-deck{
+  margin-bottom: 10px;
+}
+.class-title{
+  width: 100%;
+}
+
+.cardImg{
+  height: 200px;
+}
+
+.cardFot{
+  padding: 20px;
+  font-family: serif;
+  line-height: 10px;
+  font-size: 20px;
+}

@@ -1,0 +1,82 @@
+<br/>
+<div class="container">
+  <ss-multiselect-dropdown [options]="myOptions" [settings]="settings" [(ngModel)]="optionsModel" (ngModelChange)="onChange($event)"></ss-multiselect-dropdown>
+</div>
+<hr/>
+<!-- <div>
+  <input  class="form-control" type="text" placeholder="Search" (input)="onSearchChange($event.target.value)" >
+  <select class="form-control" id="sel1" [(ngModel)]="searchpoint" >
+    <option value="name" >Country Name</option>
+    <option value="capital" >Capital</option>
+    <option value="languages">Languages</option>
+    <option value="currencies">Currencies</option>
+  </select>
+</div> -->
+<div class="container" style=" margin-top: 10px">
+  <div class="row">
+   <div class="col-md-4" *ngFor="let o of serviceData">
+    <div class="card-deck" style="border:1px solid black;" >
+    <div class="card-header">
+      <h4 class="class-title">{{o.name}}</h4>
+    </div>
+    <div class="class-body"><img class="card-img-top cardImg" src="{{o.flag}}" height="300" width="150" alt="Card image cap"/></div>
+    <div class="class-footer cardFot">
+          <p class="card-text" >Capital :{{o.capital}}</p>
+          <p class="card-text">Region :{{o.region}}</p>
+      <p class="card-text">Language :<span *ngFor="let item of o.languages">{{item.name}}</span></p>
+          <p class="card-text">Currency :{{o.currencies[0].name}}</p>
+    </div>
+    </div>
+   </div>
+  </div>
+</div>
+  <router-outlet></router-outlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<div class="container">-->
+<!--  <div class="card" style="width: 400px;" [(ngModel)]="Cards" >-->
+<!--    <h5 class="card-title">Country Name</h5>-->
+<!--    <img class="card-img-top" src="../../img_avatar2.png" height="300" width="300" alt="Card image cap"/>-->
+<!--    <div class="card-body" class="card bg-success">-->
+<!--      <p class="card-text">Capital</p>-->
+<!--      <p class="card-text">Region</p>-->
+<!--      <p class="card-text">Language</p>-->
+<!--      <p class="card-text">Currency</p>-->
+<!--    </div>-->
+<!--    &lt;!&ndash;    <div class="card-body">&ndash;&gt;-->
+<!--    &lt;!&ndash;      <a href="#" class="card-link">Card link</a>&ndash;&gt;-->
+<!--    &lt;!&ndash;      <a href="#" class="card-link">Another link</a>&ndash;&gt;-->
+<!--    &lt;!&ndash;    </div>&ndash;&gt;-->
+<!--  </div>-->
+<!--</div>-->
+
+<!--<div *ngFor="let card of Cards">-->
+<!--  <div class="card" style="width: 400px;" [(ngModel)]="Cards">-->
+<!--    <h5 class="card-title">Country Name</h5>-->
+<!--    <img class="card-img-top" src="../../img_avatar2.png" height="300" width="300" alt="Card image cap"/>-->
+<!--    <div class="card-body" class="card bg-success">-->
+<!--      <p class="card-text">Capital</p>-->
+<!--      <p class="card-text">Region</p>-->
+<!--      <p class="card-text">Language</p>-->
+<!--      <p class="card-text">Currency</p>-->
+<!--    </div>-->
+
+<!--  </div>-->
+<!--</div>-->
